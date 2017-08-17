@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <title>Guessing Game</title>
-
-    <!-- Bootstrap and CSS here-->
-    <style>
-      .center {
-        text-align: center;
-      }
-      ul {
-          list-style: none;
-          padding: 0;
-      }
-      img {
-          display: inline;
-          width: 200px;
-          height: 100px;
-      }
-      #footer {
-          width: 100%;
-          border-top: solid 2px black;
-          background-color: white;
-          position: fixed;
-          bottom: 0;
-      }
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 
   </head>
   <body>
 
-      <div id='app'>
+      <div id='app' class='center container'>
 
         <div id='headers'>
           <h1 id='title'>Guessing Game!</h1>
@@ -37,44 +18,41 @@
         </div>
 
         <div id='main'>
-          <div id='input-parent'>
-            <input placeholder="#" maxlength="3" autofocus=autofocus></input>
-            <button>Go!</button>
+          <div id='parent-input'>
+            <input id='player-input' class='center' placeholder="#" maxlength="3" autofocus=autofocus></input>
+            <button id='submit' class="btn btn-success">Go!</button>
           </div>
 
           <div id='guesses'>
-              <ul>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
+              <ul id='guess-list'>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
               </ul>
           </div>
 
           <div id="menu-btns">
-            <button>Reset</button>
-            <button>Hint</button>
+            <button id='reset' class="btn btn-danger">Reset</button>
+            <button id='hint' class="btn btn-info">Hint</button>
           </div>
         </div>
       </div>
 
-
-
-    <div id='footer'>
-        <div>
-          <div class=''>
+    <div id='footer' class='center'>
+        <div class='row'>
+          <div class='col-sm-4'>
             <img src='fa-logo@2x.png'></img>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <h4>Project by Alejandro Villarreal</h4>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <img src='grace_hopper_academy.png'></img>
           </div>
-
 
         </div>
     </div>
